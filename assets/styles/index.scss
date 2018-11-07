@@ -5,18 +5,21 @@
   max-width: 1000px;
 }
 
-.form-inline > button {
-  border-color: #ffd03e;
-  color: #ffd03e;
-  margin-right: 10px;
-}
-
 .form-inline {
-  #sign-out-btn,
-  #change-pass-btn {
+  button {
+    border-color: #ffd03e;
+    color: #ffd03e;
+    margin-right: 10px;
+  }
+  .sign-out-btn,
+  .change-pass-btn {
     display: none;
   }
 }
+
+// .form-inline {
+//
+// }
 
 .auth-form {
   display: none;
