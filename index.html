@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic Tac Toe by Peter</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -12,6 +13,43 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+
+      <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">TIC TAC TOE by Peter</span>
+        <form class="form-inline">
+          <button class="btn btn-outline-warning" id="sign-up-btn" type="button">Sign Up</button>
+          <button class="btn btn-outline-warning" id="sign-in-btn" type="button">Sign In</button>
+          <button class="btn btn-outline-warning" id="sign-out-btn" type="button">Sign Out</button>
+          <button class="btn btn-outline-warning" id="change-pass-btn" type="button">Change Password</button>
+        </form>
+      </nav>
+
+      <div class="auth-form" id="auth-form">
+        <form id="sign-up">
+          Sign-Up
+          <input type="email">
+          <input type="password">
+          <input type="submit">
+        </form>
+        <form action="" id="sign-in">
+          Sign-In
+          <input type="email">
+          <input type="password">
+          <input type="submit">
+        </form>
+        <form action="" class="change-password" id="change-password" >
+          Change-Password
+          <input type="password">
+          <input type="passowrd">
+          <input type="submit">
+        </form>
+      </div>
+
+      <div class="main-container">
+
+
+
+
+      </div>
     </body>
 </html>
