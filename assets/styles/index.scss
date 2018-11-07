@@ -1,6 +1,27 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=KoHo:400,500i,700|Poppins');
 
 $footer-background: #f5f5f5;
+
+body {
+  background-color: #596784;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.error-message {
+  color: red;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.success-message {
+  color: white;
+  font-weight: 700;
+  margin-left: 10px;
+}
 
 .main-container {
   margin: auto;
@@ -18,24 +39,27 @@ $footer-background: #f5f5f5;
     display: none;
   }
 }
-
-// .form-inline {
-//
-// }
-
 .auth-form {
-  display: none;
   flex-direction: row;
+  border: 1px solid #343a40;
+  .sign-up-form {
+    display: none;
+  }
+  .sign-in-form {
+    display: none;
+  }
+  .change-password-form {
+    display: none;
+  }
   form {
     margin: 10px;
   }
   input {
-    width: 100px;
+    width: 125px;
   }
-}
-
-.change-password {
-  // display: none;
+  legend {
+    font-size: 18px;
+  }
 }
 
 .footer {

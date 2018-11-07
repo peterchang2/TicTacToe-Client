@@ -3,7 +3,6 @@
     <head>
       <title>Tic Tac Toe by Peter</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -12,6 +11,7 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body>
 
       <nav class="navbar navbar-dark bg-dark">
@@ -24,34 +24,31 @@
         </form>
       </nav>
 
+<!-- ==========================Auth Form========================= -->
       <div class="auth-form" id="auth-form">
-        <form id="sign-up">
-          Sign-Up
-          <input type="email">
-          <input type="password">
-          <input type="submit">
+        <form class="sign-up-form" id="sign-up-form">
+          <legend>Sign-Up</legend>
+          <input type="email" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm PW">
+          <input type="submit" value="Sign-Up">
         </form>
-        <form action="" id="sign-in">
-          Sign-In
-          <input type="email">
-          <input type="password">
-          <input type="submit">
+        <form class="sign-in-form" id="sign-in-form">
+          <legend>Sign-In</legend>
+          <input type="email" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="submit" value="Sign-In">
         </form>
-        <form action="" class="change-password" id="change-password" >
-          Change-Password
-          <input type="password">
-          <input type="passowrd">
-          <input type="submit">
+        <form class="change-password-form" id="change-password-form" >
+          <legend>Change-Password</legend>
+          <input type="password" name="passwords[old]" placeholder="Old Password">
+          <input type="passowrd" name="passwords[new]" placeholder="New Password">
+          <input type="submit" value="Change">
         </form>
       </div>
+      <div id="message"></div>
 
-      <div class="main-container">
-
-
-
-
-      </div>
-
+<!-- ========================Footer Here============================ -->
       <footer class="footer">
         <div class="container">
           <span class="text-muted">Copyright © 2018 Peter Chang</span>
