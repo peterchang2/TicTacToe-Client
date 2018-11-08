@@ -43,14 +43,20 @@ body {
 .auth-form {
   width: 100%;
   position: absolute;
+  text-align: center;
   .sign-up-form {
     display: none;
+    margin: 0 auto;
   }
   .sign-in-form {
     display: none;
+    margin: 0 auto;
+    // float: right;
   }
   .change-password-form {
     display: none;
+    margin: 0 auto;
+    // float: right;
   }
   form {
     margin: 10px;
@@ -64,7 +70,7 @@ body {
 }
 // ======================================================================
 #message-box {
-  width: 75%;
+  width: 45%;
   height: 60px;
   margin: 20px auto;
   text-align: center;
@@ -74,13 +80,13 @@ body {
 
 // ======================================================================
 .game-container {
-  margin-top: 120px;  ;
+  margin: 120px auto 0;
 }
 
 .game-board {
   display: grid;
-	width: 300px;
-	height: 300px;
+	width: 310px;
+	height: 310px;
 	margin: 0 auto;
   background-color: white;
   border: 4px solid gray;
@@ -89,7 +95,7 @@ body {
 }
 
 .box {
-  border: 4px solid gray;
+  border: 2px solid gray;
   border-radius: 2px;
   display: flex;
   justify-content: center;
