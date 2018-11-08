@@ -26,27 +26,55 @@
 
 <!-- ==========================Auth Form========================= -->
       <div class="auth-form" id="auth-form">
-        <form class="sign-up-form" id="sign-up-form">
+        <form class="sign-up-form center" id="sign-up-form">
           <legend>Sign-Up</legend>
           <input type="email" name="credentials[email]" placeholder="Email">
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm PW">
           <input type="submit" value="Sign-Up">
         </form>
-        <form class="sign-in-form" id="sign-in-form">
+        <form class="sign-in-form center" id="sign-in-form">
           <legend>Sign-In</legend>
           <input type="email" name="credentials[email]" placeholder="Email">
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="submit" value="Sign-In">
         </form>
-        <form class="change-password-form" id="change-password-form" >
+        <form class="change-password-form center" id="change-password-form" >
           <legend>Change-Password</legend>
           <input type="password" name="passwords[old]" placeholder="Old Password">
           <input type="passowrd" name="passwords[new]" placeholder="New Password">
           <input type="submit" value="Change">
         </form>
       </div>
-      <div id="message"></div>
+
+      <div class="game-container">
+        <div class="game-board">
+          <div data-cell-index='0' class="box">0</div>
+          <div data-cell-index='1' class="box">1</div>
+          <div data-cell-index='2' class="box">2</div>
+          <div data-cell-index='3' class="box">3</div>
+          <div data-cell-index='4' class="box">4</div>
+          <div data-cell-index='5' class="box">5</div>
+          <div data-cell-index='6' class="box">6</div>
+          <div data-cell-index='7' class="box">7</div>
+          <div data-cell-index='8' class="box">8</div>
+        </div>
+      </div>
+
+      <div id="message-box">
+        <div id="game-message"></div>
+        <div id="message"></div>
+      </div>
+
+      <div class="game-btn">
+        <button class="start-game-btn" id="start-game-btn">Start Game</button>
+        <button class="reset-game-btn" id="reset-game-btn">Reset Game</button>
+        <button class="get-game-btn" id="get-game-btn">Get Game</button>
+
+      </div>
+
+
+
 
 <!-- ========================Footer Here============================ -->
       <footer class="footer">

@@ -2,18 +2,6 @@
 
 const store = require('../store.js')
 
-$('#sign-up-btn').click(function () {
-  $('.sign-up-form').slideDown(500)
-  $('.sign-in-form').slideUp(500)
-})
-$('#sign-in-btn').click(function () {
-  $('.sign-in-form').slideDown(500)
-  $('.sign-up-form').slideUp(500)
-})
-$('#change-pass-btn').click(function () {
-  $('.change-password-form').slideDown(500)
-})
-
 const failure = function (FailureResponse) {
   $('#message').html('Something Went Wrong, Please Try Again')
   $('#message').removeClass('success-message')
