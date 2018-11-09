@@ -14,7 +14,7 @@ const getGame = function (inputData) {
   })
 }
 
-const createGame = function (inputData) {
+const createGame = function (createGameResponse) {
   return $.ajax({
     method: 'POST',
     url: 'https://tic-tac-toe-wdi.herokuapp.com/games/',
@@ -22,7 +22,7 @@ const createGame = function (inputData) {
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
-    data: JSON.stringify(inputData)
+    data: {}
   })
 }
 
@@ -38,8 +38,31 @@ const getGameId = function (gameId) {
   })
 }
 
+const onGameUpdate = function (index, value) {
+  return $.ajax({
+    method: 'PATCH',
+    url: `https://tic-tac-toe-wdi.herokuapp.com/games/` + store.game.game.id,
+    contentType: 'application/json',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: JSON.stringify(
+      {
+        'game': {
+          'cell': {
+            'index': $(event.target).attr('data-cell-index'),
+            'value': value
+          },
+          'over': false
+        }
+      }
+    )
+  })
+}
+
 module.exports = {
   getGame,
   createGame,
-  getGameId
+  getGameId,
+  onGameUpdate
 }

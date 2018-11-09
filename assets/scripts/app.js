@@ -17,6 +17,7 @@ $(() => {
   $('#get-game-btn').on('click', gameEvents.onGetGame)
   $('#start-game-btn').on('click', gameEvents.onCreateGame)
   $('#get-game').on('submit', gameEvents.onGetGameId)
+  $('.box').on('click', gameEvents.onBoxClick)
 })
 
 // ===== Button Action
@@ -29,17 +30,17 @@ $('.game-container').click(function () {
 $('#sign-up-btn').click(function () {
   $('.sign-up-form').slideDown(500)
   $('.sign-in-form').slideUp(500)
-  // $('#message').show(500)
+  $('#message').show(500)
   // $('#message').val('')
 })
 $('#sign-in-btn').click(function () {
   $('.sign-in-form').slideDown(500)
   $('.sign-up-form').slideUp(500)
-  // $('#message').show(500)
+  $('#message').show(500)
   // $('#message').val('')
 })
 $('#change-pass-btn').click(function () {
   $('.change-password-form').slideDown(500)
-  // $('#message').show(500)
+  $('#message').show(500)
   // $('#message').val('')
 })

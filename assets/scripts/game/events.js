@@ -2,6 +2,7 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+const store = require('../store.js')
 
 const onGetGame = function (event) {
   event.preventDefault()
@@ -10,7 +11,7 @@ const onGetGame = function (event) {
     .catch(ui.failure)
 }
 
-const onCreateGame = function (event) {
+const onCreateGame = function () {
   event.preventDefault()
   api.createGame()
     .then(ui.createGameSuccess)
@@ -27,8 +28,21 @@ const onGetGameId = function (event) {
     .catch(ui.failure)
 }
 
+const player1 = 'X'
+const onBoxClick = function (event) {
+  event.preventDefault()
+  const currentBoxIndex = $(event.target).data().cellIndex
+  store.gameBoard[currentBoxIndex] = player1
+  console.log(store)
+  console.log(currentBoxIndex)
+  api.onGameUpdate(currentBoxIndex, player1)
+    .then()
+    .catch()
+}
+
 module.exports = {
   onGetGame,
   onCreateGame,
-  onGetGameId
+  onGetGameId,
+  onBoxClick
 }

@@ -1,6 +1,6 @@
 'use strict'
 
-// const store = require('../store.js')
+const store = require('../store.js')
 const events = require('./events.js')
 
 const failure = function (FailureResponse) {
@@ -15,7 +15,9 @@ const getGameSuccess = function () {
   $('#game-message').addClass('success-message')
 }
 
-const createGameSuccess = function () {
+const createGameSuccess = function (data) {
+  store.game = data
+  console.log(store)
   $('#game-message').html('Game Created and Started')
   $('#game-message').removeClass('error-message')
   $('#game-message').addClass('success-message')
