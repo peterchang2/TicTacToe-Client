@@ -29,9 +29,14 @@ const getGameIdSuccess = function () {
   $('#game-message').addClass('success-message')
 }
 
+const placeX = function () {
+
+}
+
 module.exports = {
   failure,
   getGameSuccess,
   createGameSuccess,
-  getGameIdSuccess
+  getGameIdSuccess,
+  placeX
 }

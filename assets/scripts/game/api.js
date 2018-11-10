@@ -5,7 +5,7 @@ const store = require('../store.js')
 const getGame = function (inputData) {
   return $.ajax({
     method: 'GET',
-    url: 'https://tic-tac-toe-wdi.herokuapp.com/games',
+    url: 'https://tic-tac-toe-wdi.herokuapp.com/games/',
     contentType: 'application/json',
     headers: {
       Authorization: `Token token=${store.user.token}`

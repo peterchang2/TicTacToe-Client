@@ -49,15 +49,15 @@
 
       <div class="game-container">
         <div class="game-board">
-          <div data-cell-index='0' class="box">0</div>
-          <div data-cell-index='1' class="box">1</div>
-          <div data-cell-index='2' class="box">2</div>
-          <div data-cell-index='3' class="box">3</div>
-          <div data-cell-index='4' class="box">4</div>
-          <div data-cell-index='5' class="box">5</div>
-          <div data-cell-index='6' class="box">6</div>
-          <div data-cell-index='7' class="box">7</div>
-          <div data-cell-index='8' class="box">8</div>
+          <div data-cell-index='0' class="box"></div>
+          <div data-cell-index='1' class="box"></div>
+          <div data-cell-index='2' class="box"></div>
+          <div data-cell-index='3' class="box"></div>
+          <div data-cell-index='4' class="box"></div>
+          <div data-cell-index='5' class="box"></div>
+          <div data-cell-index='6' class="box"></div>
+          <div data-cell-index='7' class="box"></div>
+          <div data-cell-index='8' class="box"></div>
         </div>
       </div>
 
@@ -67,12 +67,14 @@
       </div>
 
       <div class="game-btn">
-        <button class="start-game-btn" id="start-game-btn">Start Game</button>
-        <button class="reset-game-btn" id="reset-game-btn">Reset Game</button>
-
+        <div>
+          <button class="start-game-btn" id="start-game-btn">Start Game</button>
+          <button class="reset-game-btn" id="reset-game-btn">Reset Game</button>
+          <button class="get-all-game-btn" id="get-all-game-btn">Get All</button>
+        </div>
         <form action="" class="get-game" id="get-game">
           <input type="text" name="games[id]" placeholder="Game ID">
-          <input type="submit" placeholder="previous game">
+          <input type="submit" value="Find Games">
         </form>
       </div>
 

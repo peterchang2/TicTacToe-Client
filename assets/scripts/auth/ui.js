@@ -3,7 +3,7 @@
 const store = require('../store.js')
 
 const failure = function (FailureResponse) {
-  $('#message').html('Something Went Wrong, Please Try Again')
+  $('#message').html('Wrong Turn, Try Again')
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
 }

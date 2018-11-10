@@ -28,21 +28,8 @@ const onGetGameId = function (event) {
     .catch(ui.failure)
 }
 
-const player1 = 'X'
-const onBoxClick = function (event) {
-  event.preventDefault()
-  const currentBoxIndex = $(event.target).data().cellIndex
-  store.gameBoard[currentBoxIndex] = player1
-  console.log(store)
-  console.log(currentBoxIndex)
-  api.onGameUpdate(currentBoxIndex, player1)
-    .then()
-    .catch()
-}
-
 module.exports = {
   onGetGame,
   onCreateGame,
-  onGetGameId,
-  onBoxClick
+  onGetGameId
 }
