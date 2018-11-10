@@ -17,11 +17,13 @@ const getGameSuccess = function (data) {
 
 const createGameSuccess = function (data) {
   store.game = data
+  // store.over = data.game.over
   store.cells = data.game.cells
   console.log(store)
   $('#game-message').html('Game Created and Started')
   $('#game-message').removeClass('error-message')
   $('#game-message').addClass('success-message')
+  $('.box').on('click')
 }
 
 const getGameIdSuccess = function () {
@@ -29,6 +31,7 @@ const getGameIdSuccess = function () {
   $('#game-message').removeClass('error-message')
   $('#game-message').addClass('success-message')
 }
+
 
 const placeX = function () {
   $('.box').html('X')

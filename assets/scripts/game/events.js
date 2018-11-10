@@ -34,13 +34,14 @@ const onBoxClick = function (event) {
   event.preventDefault()
   const currentBoxIndex = $(event.target).data().cellIndex
   const player1 = store.player
-  store.cells[currentBoxIndex] = player1
-  console.log(store)
-  console.log(currentBoxIndex)
+  // console.log(store)
+  // console.log(currentBoxIndex)
   api.onGameUpdate(currentBoxIndex, player1)
     .then()
     .catch()
+  gameLogic.gameBoard(currentBoxIndex, player1)
   gameLogic.gameLogic(player1)
+  console.log(store)
   console.log(store.game.game.cells)
   gameLogic.winOrNot(store.game.game.cells)
 }

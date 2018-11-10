@@ -51,9 +51,9 @@ const onGameUpdate = function (index, value) {
         'game': {
           'cell': {
             'index': $(event.target).attr('data-cell-index'),
-            'value': value
+            'value': store.player
           },
-          'over': false
+          'over': store.Over
         }
       }
     )

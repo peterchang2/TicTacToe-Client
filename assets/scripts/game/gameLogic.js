@@ -3,10 +3,28 @@ const api = require('./api.js')
 // const ui = require('./ui.js')
 const store = require('../store.js')
 
+store.Over = false
+const playerOne = 'X'
+const playerTwo = 'O'
+
 const gameLogic = function (player) {
   const players = player === 'X' ? 'O' : 'X'
   store.player = players
+
   return store.player
+}
+
+const gameBoard = function (id, value) {
+  if (store.cells[id] === '') {
+    store.cells[id] = value
+    console.log('Worked')
+  } else if (store.cells[id] === 'X' || 'O') {
+    console.log('Misclicked')
+  } else if (store.game.game.over === true) {
+    $('.box').off('click')
+  } else if (store.game.game.over === false) {
+    $('.box').on('click')
+  }
 }
 
 const winOrNot = function (board) {
@@ -18,8 +36,9 @@ const winOrNot = function (board) {
   (board[2] === 'X' && board[5] === 'X' && board[8] === 'X') ||
   (board[0] === 'X' && board[4] === 'X' && board[8] === 'X') ||
   (board[2] === 'X' && board[4] === 'X' && board[6] === 'X')) {
-    $('.box').off('click')
     store.game.game.over = true
+    console.log(store.game.game.over)
+    store.player = 'X'
     $('#game-message').html('X Wins!!!')
   } else if ((board[0] === 'O' && board[1] === 'O' && board[2] === 'O') ||
   (board[3] === 'O' && board[4] === 'O' && board[5] === 'O') ||
@@ -29,22 +48,19 @@ const winOrNot = function (board) {
   (board[2] === 'O' && board[5] === 'O' && board[8] === 'O') ||
   (board[0] === 'O' && board[4] === 'O' && board[8] === 'O') ||
   (board[2] === 'O' && board[4] === 'O' && board[6] === 'O')) {
-    $('.box').off('click')
     store.game.game.over = true
+    store.player = 'X'
     $('#game-message').html('O Wins!!!')
   } else if (board[0] !== '' && board[1] !== '' && board[2] !== '' && board[3] !== '' && board[4] !== '' && board[5] !== '' && board[6] !== '' && board[7] !== '' && board[8] !== '') {
-    $('.box').off('click')
     store.game.game.over = true
     $('#game-message').html('You Tied')
   }
+  // api.onGameUpdate()
 }
-
-// const turnClickOn = function (event) {
-//   api.onGameUpdate(event)
-// }
 
 module.exports = {
   gameLogic,
-  winOrNot
+  winOrNot,
+  gameBoard
   // turnClickOn
 }
