@@ -3,9 +3,8 @@
 const store = {
 }
 
-const gameBoard = ['', '', '', '', '', '', '', '', '']
-
+const player = 'X'
 module.exports = {
   store,
-  gameBoard
+  player
 }

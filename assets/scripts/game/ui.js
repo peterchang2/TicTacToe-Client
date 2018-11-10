@@ -9,14 +9,15 @@ const failure = function (FailureResponse) {
   $('#game-message').addClass('error-message')
 }
 
-const getGameSuccess = function () {
-  $('#game-message').html('Game Found')
+const getGameSuccess = function (data) {
+  $('#game-message').text(`Games Found ${data.games.length}`)
   $('#game-message').removeClass('error-message')
   $('#game-message').addClass('success-message')
 }
 
 const createGameSuccess = function (data) {
   store.game = data
+  store.cells = data.game.cells
   console.log(store)
   $('#game-message').html('Game Created and Started')
   $('#game-message').removeClass('error-message')
@@ -30,7 +31,7 @@ const getGameIdSuccess = function () {
 }
 
 const placeX = function () {
-
+  $('.box').html('X')
 }
 
 module.exports = {
