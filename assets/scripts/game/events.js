@@ -17,7 +17,6 @@ const onCreateGame = function () {
   api.createGame()
     .then(ui.createGameSuccess)
     .catch(ui.failure)
-  // gameLogic.turnClickOn()
 }
 
 const onGetGameId = function (event) {
@@ -30,17 +29,21 @@ const onGetGameId = function (event) {
     .catch(ui.failure)
 }
 
+// const player2 = 'O'
+
 const onBoxClick = function (event) {
   event.preventDefault()
   const currentBoxIndex = $(event.target).data().cellIndex
   const player1 = store.player
+  const over = store.over
+  // const player1 = store.player
   // console.log(store)
   // console.log(currentBoxIndex)
   api.onGameUpdate(currentBoxIndex, player1)
-    .then()
+    .then(ui.onGameUpdateSuccess(currentBoxIndex))
     .catch()
-  gameLogic.gameBoard(currentBoxIndex, player1)
-  gameLogic.gameLogic(player1)
+  gameLogic.gameBoard(currentBoxIndex, player1, over)
+  gameLogic.switchPlayer(player1)
   console.log(store)
   console.log(store.game.game.cells)
   gameLogic.winOrNot(store.game.game.cells)

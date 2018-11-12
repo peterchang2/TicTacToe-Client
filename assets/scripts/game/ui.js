@@ -16,8 +16,8 @@ const getGameSuccess = function (data) {
 }
 
 const createGameSuccess = function (data) {
-  data = store.game
-  // store.over = data.game.over
+  store.game = data
+  store.over = data.game.over
   store.cells = data.game.cells
   console.log(store)
   $('#game-message').html('Game Created and Started')
@@ -32,9 +32,18 @@ const getGameIdSuccess = function () {
   $('#game-message').addClass('success-message')
 }
 
+const onGameUpdateSuccess = function (currentBoxIndex) {
+  if (store.player === 'X' && store.over === false && store.cells[currentBoxIndex] === '') {
+    $($(event.target)).html('X')
+  } else if (store.player === 'O' && store.over === false && store.cells[currentBoxIndex] === '') {
+    $($(event.target)).html('O')
+  }
+}
+
 module.exports = {
   failure,
   getGameSuccess,
   createGameSuccess,
-  getGameIdSuccess
+  getGameIdSuccess,
+  onGameUpdateSuccess
 }

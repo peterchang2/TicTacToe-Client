@@ -1,34 +1,31 @@
 
-const api = require('./api.js')
+// const api = require('./api.js')
 // const ui = require('./ui.js')
 const store = require('../store.js')
 
-store.Over = false
-
-const gameLogic = function (player) {
-  const playerOne = 'X'
-  const playerTwo = 'O'
-  const players = player === 'X' ? 'O' : 'X'
-  store.player = players
-  if (store.player === 'O') {
-    $(event.target).html('X')
-  } else if (store.player === 'X') {
-    $(event.target).html('O')
+const switchPlayer = function (player) {
+  if (store.misclick === 'misclick') {
+    return
   }
-
-  return store.player
+  if (store.misclick === 'click') {
+    const players = player === 'X' ? 'O' : 'X'
+    store.player = players
+    return players
+  }
 }
 
-const gameBoard = function (id, value) {
+const gameBoard = function (id, value, over) {
+  if (over === true) {
+    return
+  }
   if (store.cells[id] === '') {
     store.cells[id] = value
     console.log('Worked')
+    store.misclick = 'click'
+    // e.preventDefault()
   } else if (store.cells[id] === 'X' || 'O') {
     console.log('Misclicked')
-  } else if (store.game.game.over === true) {
-    $('.box').off('click')
-  } else if (store.game.game.over === false) {
-    $('.box').on('click')
+    store.misclick = 'misclick'
   }
 }
 
@@ -41,9 +38,10 @@ const winOrNot = function (board) {
   (board[2] === 'X' && board[5] === 'X' && board[8] === 'X') ||
   (board[0] === 'X' && board[4] === 'X' && board[8] === 'X') ||
   (board[2] === 'X' && board[4] === 'X' && board[6] === 'X')) {
-    store.game.game.over = true
-    console.log(store.game.game.over)
+    store.over = true
+    console.log(store.over)
     store.player = 'X'
+    store.winner = 'X'
     $('#game-message').html('X Wins!!!')
   } else if ((board[0] === 'O' && board[1] === 'O' && board[2] === 'O') ||
   (board[3] === 'O' && board[4] === 'O' && board[5] === 'O') ||
@@ -53,18 +51,20 @@ const winOrNot = function (board) {
   (board[2] === 'O' && board[5] === 'O' && board[8] === 'O') ||
   (board[0] === 'O' && board[4] === 'O' && board[8] === 'O') ||
   (board[2] === 'O' && board[4] === 'O' && board[6] === 'O')) {
-    store.game.game.over = true
+    store.over = true
     store.player = 'X'
+    store.winner = 'O'
     $('#game-message').html('O Wins!!!')
   } else if (board[0] !== '' && board[1] !== '' && board[2] !== '' && board[3] !== '' && board[4] !== '' && board[5] !== '' && board[6] !== '' && board[7] !== '' && board[8] !== '') {
-    store.game.game.over = true
+    store.over = true
     store.player = 'X'
+    store.winner = 'Tie'
     $('#game-message').html('You Tied')
   }
 }
 
 module.exports = {
-  gameLogic,
+  switchPlayer,
   winOrNot,
   gameBoard
 }
