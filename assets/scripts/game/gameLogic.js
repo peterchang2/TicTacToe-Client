@@ -4,12 +4,17 @@ const api = require('./api.js')
 const store = require('../store.js')
 
 store.Over = false
-const playerOne = 'X'
-const playerTwo = 'O'
 
 const gameLogic = function (player) {
+  const playerOne = 'X'
+  const playerTwo = 'O'
   const players = player === 'X' ? 'O' : 'X'
   store.player = players
+  if (store.player === 'O') {
+    $(event.target).html('X')
+  } else if (store.player === 'X') {
+    $(event.target).html('O')
+  }
 
   return store.player
 }
@@ -53,14 +58,13 @@ const winOrNot = function (board) {
     $('#game-message').html('O Wins!!!')
   } else if (board[0] !== '' && board[1] !== '' && board[2] !== '' && board[3] !== '' && board[4] !== '' && board[5] !== '' && board[6] !== '' && board[7] !== '' && board[8] !== '') {
     store.game.game.over = true
+    store.player = 'X'
     $('#game-message').html('You Tied')
   }
-  // api.onGameUpdate()
 }
 
 module.exports = {
   gameLogic,
   winOrNot,
   gameBoard
-  // turnClickOn
 }
