@@ -10,6 +10,7 @@ const switchPlayer = function (player) {
   if (store.misclick === 'click') {
     const players = player === 'X' ? 'O' : 'X'
     store.player = players
+    $('#player-turn').html(`Player: ${store.player}'s Turn`)
     return players
   }
 }
@@ -20,11 +21,11 @@ const gameBoard = function (id, value, over) {
   }
   if (store.cells[id] === '') {
     store.cells[id] = value
-    console.log('Worked')
+    // console.log('Worked')
     store.misclick = 'click'
     // e.preventDefault()
   } else if (store.cells[id] === 'X' || 'O') {
-    console.log('Misclicked')
+    $('#game-message').html('Misclicked')
     store.misclick = 'misclick'
   }
 }

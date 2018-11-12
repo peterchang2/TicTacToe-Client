@@ -23,7 +23,11 @@ const createGameSuccess = function (data) {
   $('#game-message').html('Game Created and Started')
   $('#game-message').removeClass('error-message')
   $('#game-message').addClass('success-message')
-  $('.box').html('')
+  // $('#player-turn').html('')
+  $('.box').empty()
+  $('#player-turn').html(`Player: ${store.player}'s Turn`)
+  $('#player-turn').removeClass('error-message')
+  $('#player-turn').addClass('success-message')
 }
 
 const getGameIdSuccess = function () {
@@ -34,9 +38,9 @@ const getGameIdSuccess = function () {
 
 const onGameUpdateSuccess = function (currentBoxIndex) {
   if (store.player === 'X' && store.over === false && store.cells[currentBoxIndex] === '') {
-    $($(event.target)).html('X')
+    $(event.target).html('X')
   } else if (store.player === 'O' && store.over === false && store.cells[currentBoxIndex] === '') {
-    $($(event.target)).html('O')
+    $(event.target).html('O')
   }
 }
 

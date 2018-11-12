@@ -22,6 +22,7 @@
           <button class="btn btn-outline-warning sign-out-btn" id="sign-out-btn" type="button">Sign Out</button>
           <button class="btn btn-outline-warning change-pass-btn" id="change-pass-btn" type="button">Change Password</button>
         </form>
+
       </nav>
 
 <!-- ==========================Auth Form========================= -->
@@ -42,10 +43,12 @@
         <form class="change-password-form center" id="change-password-form" >
           <legend>Change-Password</legend>
           <input type="password" name="passwords[old]" placeholder="Old Password">
-          <input type="passowrd" name="passwords[new]" placeholder="New Password">
+          <input type="password" name="passwords[new]" placeholder="New Password">
           <input type="submit" value="Change">
         </form>
       </div>
+
+      <h1 class="got-game">Got Game?</h1>
 
       <div class="game-container">
         <div class="game-board">
@@ -61,25 +64,23 @@
         </div>
       </div>
 
-      <div id="message-box">
-        <div id="game-message"></div>
-        <div id="message"></div>
-      </div>
-
       <div class="game-btn">
         <div>
           <button class="start-game-btn" id="start-game-btn">Start Game</button>
-          <button class="reset-game-btn" id="reset-game-btn">Reset Game</button>
+          <!-- <button class="reset-game-btn" id="reset-game-btn">Reset Game</button> -->
           <button class="get-all-game-btn" id="get-all-game-btn">Get All</button>
         </div>
-        <form action="" class="get-game" id="get-game">
+        <!-- <form action="" class="get-game" id="get-game">
           <input type="text" name="games[id]" placeholder="Game ID">
           <input type="submit" value="Find Games">
-        </form>
+        </form> -->
       </div>
 
-
-
+      <div id="message-box">
+        <div id="player-turn"></div>
+        <div id="game-message"></div>
+        <div id="message"></div>
+      </div>
 
 <!-- ========================Footer Here============================ -->
       <footer class="footer">

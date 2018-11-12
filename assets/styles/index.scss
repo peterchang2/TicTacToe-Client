@@ -11,16 +11,11 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.error-message {
-  color: red;
-  font-weight: 700;
-  margin-left: 10px;
-}
-
-.success-message {
-  color: white;
-  font-weight: 700;
-  margin-left: 10px;
+.got-game {
+  text-align: center;
+  width: 100%;
+  margin-top: 25%;
+  position: absolute;
 }
 
 .main-container {
@@ -69,18 +64,11 @@ body {
   }
 }
 // ======================================================================
-#message-box {
-  width: 45%;
-  height: 60px;
-  margin: 10px auto;
-  text-align: center;
-  // border: 1px solid #343a40;
-  border-radius: 30px;
-}
 
-// ======================================================================
+
 .game-container {
   margin: 120px auto 0;
+  display: none;
 }
 
 .game-board {
@@ -110,12 +98,13 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
+  margin: 10px auto 0 auto;
   align-items: center;
   justify-content: center;
   .start-game-btn {
     margin: 10px 5px 10px 5px;
     border-radius: 15px;
+    display: none;
   }
   .reset-game-btn {
     margin: 10px 5px 10px 5px;
@@ -128,10 +117,33 @@ body {
   .get-all-game-btn {
     margin: 10px 5px 10px 5px;
     border-radius: 15px;
+    display: none;
   }
 }
 // ======================================================================
 
+#message-box {
+  width: 100%;
+  height: 160px;
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+  bottom: 0;
+  line-height: 60px;
+  position: absolute;
+}
+
+.error-message {
+  color: red;
+  font-weight: 700;
+}
+
+.success-message {
+  color: white;
+  font-weight: 700;
+  height: 40px;
+}
+// ======================================================================
 .footer {
   background-color: $footer-background;
   bottom: 0;
