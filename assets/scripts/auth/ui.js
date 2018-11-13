@@ -60,6 +60,7 @@ const signOutSuccess = function () {
   $('.box').html('')
   $('.game-container').fadeOut(500)
   $('.got-game').fadeIn(500)
+  $('#change-password-form').trigger('reset')
 }
 
 module.exports = {
