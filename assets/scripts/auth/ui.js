@@ -3,9 +3,14 @@
 const store = require('../store.js')
 
 const failure = function (FailureResponse) {
-  $('#message').html('Wrong Turn, Try Again')
-  $('#message').removeClass('success-message')
-  $('#message').addClass('error-message')
+  $('#game-message').html('Wrong Turn, Try Again')
+  $('#game-message').removeClass('success-message')
+  $('#game-message').addClass('error-message')
+}
+const changePassFailure = function () {
+  $('#game-message').html('New Password Cannot Match Old Password')
+  $('#game-message').removeClass('success-message')
+  $('#game-message').addClass('error-message')
 }
 
 const signUpSuccess = function (signUpResponse) {
@@ -17,7 +22,7 @@ const signUpSuccess = function (signUpResponse) {
 
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
-  console.log(store.user)
+  // console.log(store.user)
   $('#game-message').html('You Signed In Successfully')
   $('.sign-up-form').slideUp(500)
   $('.sign-in-form').slideUp(500)
@@ -62,6 +67,7 @@ module.exports = {
   signUpSuccess,
   signInSuccess,
   changePasswordSuccess,
-  signOutSuccess
+  signOutSuccess,
+  changePassFailure
 
 }

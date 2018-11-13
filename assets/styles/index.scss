@@ -14,7 +14,7 @@ body {
 .got-game {
   text-align: center;
   width: 100%;
-  margin-top: 25%;
+  margin-top: 200px;
   position: absolute;
 }
 
@@ -63,11 +63,10 @@ body {
     font-size: 18px;
   }
 }
+
 // ======================================================================
-
-
 .game-container {
-  margin: 120px auto 0;
+  margin: 140px auto 0;
   display: none;
 }
 
@@ -94,6 +93,7 @@ body {
   }
 }
 
+//====================================================================
 .game-btn {
   width: 100%;
   display: flex;
@@ -136,14 +136,17 @@ body {
 .error-message {
   color: red;
   font-weight: 700;
+  font-size: 20px;
 }
 
 .success-message {
-  color: white;
+  color: #d8b33e;
   font-weight: 700;
+  font-size: 20px;
   height: 40px;
 }
 // ======================================================================
+
 .footer {
   background-color: $footer-background;
   bottom: 0;

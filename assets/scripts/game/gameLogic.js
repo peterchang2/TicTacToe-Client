@@ -40,7 +40,7 @@ const winOrNot = function (board) {
   (board[0] === 'X' && board[4] === 'X' && board[8] === 'X') ||
   (board[2] === 'X' && board[4] === 'X' && board[6] === 'X')) {
     store.over = true
-    console.log(store.over)
+    // console.log(store.over)
     store.player = 'X'
     store.winner = 'X'
     $('#game-message').html('X Wins!!!')

@@ -19,11 +19,10 @@ const createGameSuccess = function (data) {
   store.game = data
   store.over = data.game.over
   store.cells = data.game.cells
-  console.log(store)
+  // console.log(store)
   $('#game-message').html('Game Created and Started')
   $('#game-message').removeClass('error-message')
   $('#game-message').addClass('success-message')
-  // $('#player-turn').html('')
   $('.box').empty()
   $('#player-turn').html(`Player: ${store.player}'s Turn`)
   $('#player-turn').removeClass('error-message')
