@@ -1,15 +1,37 @@
-[A game of TIC TAC TOE](https://peterchang2.github.io/TicTacToe-Client/)
+
+[TIC TAC TOE](https://peterchang2.github.io/TicTacToe-Client/)
+[Wireframe](https://i.imgur.com/z1Ot262.jpg)
 
 ## Objective
-- Create a Tic Tac Toe Game
+* Create a Tic Tac Toe Game using HTML/CSS/JS
 
 ## Technologies Used
-- html
-- css
-- javascript
-- jquery
+* HTML
+* CSS
+* Javascript
+* JQuery
+* AJAX
+* Bootstrap
+* SASS
+* API
 
 ## Thought Process & Steps
-- Started with Auth api.
-- Then proceeded to Game api.
-- Game logic took a big chunk of time.
+* Started with authentication api.
+* Then proceeded to game related api.
+* Game logic
+* CSS
+
+## User Stories
+* User will be able to sign up.
+* User can sign in.
+* User have the ability to change password.
+* User can sign out.
+* User can create a new game and play against him/herself.
+* User can retrieve total number of games created.
+
+## Future Implementations
+* Better CSS
+* Able to retrieve and display all game ID associated with the user.
+* Look up a specific game by game ID.
+* AI gameplay
+* 2 player multiplayer

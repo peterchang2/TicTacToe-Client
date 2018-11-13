@@ -13,8 +13,9 @@ body {
 
 .got-game {
   text-align: center;
+  height: 150px;
   width: 100%;
-  margin: 150px auto;
+  margin: 150px auto 50px auto;
   position: absolute;
 }
 
@@ -46,12 +47,10 @@ body {
   .sign-in-form {
     display: none;
     margin: 0 auto;
-    // float: right;
   }
   .change-password-form {
     display: none;
     margin: 0 auto;
-    // float: right;
   }
   form {
     margin: 10px;
@@ -129,14 +128,13 @@ body {
 #message-box {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
-  width: 100%;
-  height: 140px;
-  margin: 0 auto;
+  height: 100px;
+  margin: 100px auto 0 auto;
   text-align: center;
+  left: 0;
   bottom: 0;
+  width: 100%;
   line-height: 60px;
-  // position: absolute;
   #player-turn {
     margin: 0 10px;
     align-items: start;
@@ -149,6 +147,10 @@ body {
     align-content: flex-start;
     justify-content: center;
   }
+}
+
+.sticky {
+  position: fixed;
 }
 
 .error-message {
