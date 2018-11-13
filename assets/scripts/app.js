@@ -22,23 +22,22 @@ $(() => {
 })
 
 // ===== Button Action
-$('.game-container').click(function () {
+$('.game-container, .got-game').click(function () {
   $('.sign-in-form').slideUp(500)
   $('.sign-up-form').slideUp(500)
   $('.change-password-form').slideUp(500)
   $('#message').hide(500)
 })
 $('#sign-up-btn').click(function () {
-  $('.sign-up-form').slideDown(500)
+  $('.sign-up-form').slideDown(300)
   $('.sign-in-form').slideUp(500)
-  $('#message').show(500)
+  $('#message').hide(500)
   // $('#message').val('')
 })
 $('#sign-in-btn').click(function () {
-  $('.sign-in-form').slideDown(500)
+  $('.sign-in-form').slideDown(300)
   $('.sign-up-form').slideUp(500)
-  $('#message').show(500)
-  // $('#message').val('')
+  // $('#game-message').html('')
 })
 $('#change-pass-btn').click(function () {
   $('.change-password-form').slideDown(500)

@@ -13,6 +13,7 @@ const getGameSuccess = function (data) {
   $('#game-message').text(`Games Found ${data.games.length}`)
   $('#game-message').removeClass('error-message')
   $('#game-message').addClass('success-message')
+  $('#message').hide(500)
 }
 
 const createGameSuccess = function (data) {
@@ -27,6 +28,7 @@ const createGameSuccess = function (data) {
   $('#player-turn').html(`Player: ${store.player}'s Turn`)
   $('#player-turn').removeClass('error-message')
   $('#player-turn').addClass('success-message')
+  $('#message').hide(500)
 }
 
 const getGameIdSuccess = function () {
