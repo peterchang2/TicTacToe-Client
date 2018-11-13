@@ -10,7 +10,6 @@
 - jquery
 
 ## Thought Process & Steps
-- One step at a time.
 - Started with Auth api.
 - Then proceeded to Game api.
 - Game logic took a big chunk of time.
