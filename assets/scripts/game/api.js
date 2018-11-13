@@ -1,11 +1,12 @@
 'use strict'
 
 const store = require('../store.js')
+const config = require('../config.js')
 
 const getGame = function (inputData) {
   return $.ajax({
     method: 'GET',
-    url: 'https://tic-tac-toe-wdi.herokuapp.com/games/',
+    url: config.apiUrl + '/games/',
     contentType: 'application/json',
     headers: {
       Authorization: `Token token=${store.user.token}`
@@ -17,7 +18,7 @@ const getGame = function (inputData) {
 const createGame = function (createGameResponse) {
   return $.ajax({
     method: 'POST',
-    url: 'https://tic-tac-toe-wdi.herokuapp.com/games/',
+    url: config.apiUrl + '/games/',
     contentType: 'application/json',
     headers: {
       Authorization: `Token token=${store.user.token}`
@@ -29,7 +30,7 @@ const createGame = function (createGameResponse) {
 const getGameId = function (gameId) {
   return $.ajax({
     method: 'GET',
-    url: `https://tic-tac-toe-wdi.herokuapp.com/games/` + gameId,
+    url: config.apiUrl + '/games/' + gameId,
     contentType: 'application/json',
     headers: {
       Authorization: `Token token=${store.user.token}`
@@ -41,7 +42,7 @@ const getGameId = function (gameId) {
 const onGameUpdate = function (index, value) {
   return $.ajax({
     method: 'PATCH',
-    url: `https://tic-tac-toe-wdi.herokuapp.com/games/` + store.game.game.id,
+    url: config.apiUrl + '/games/' + store.game.game.id,
     contentType: 'application/json',
     headers: {
       Authorization: `Token token=${store.user.token}`

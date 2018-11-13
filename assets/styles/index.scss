@@ -75,19 +75,20 @@ body {
 	width: 310px;
 	height: 310px;
 	margin: 0 auto;
-  background-color: white;
-  border: 4px solid gray;
+  background-color: #596784;
+  // border: 4px solid #d8b33e;
   border-radius: 10px;
 	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
 .box {
-  border: 2px solid gray;
-  border-radius: 2px;
+  border: 2px solid #f3cf20;
+  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 35px;
+  color: white;
   &:hover {
     background-color: #bfd2cd;
   }
@@ -98,7 +99,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 10px auto 0 auto;
+  margin: 45px auto 0 auto;
   align-items: center;
   justify-content: center;
   .start-game-btn {
