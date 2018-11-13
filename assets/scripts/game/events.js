@@ -44,6 +44,7 @@ const onBoxClick = function (event) {
   // console.log(store)
   // console.log(store.game.game.cells)
   gameLogic.winOrNot(store.game.game.cells)
+  $('#message').fadeOut(500)
 }
 
 module.exports = {

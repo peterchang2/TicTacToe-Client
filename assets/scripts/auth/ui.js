@@ -23,7 +23,7 @@ const signUpSuccess = function (signUpResponse) {
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
   // console.log(store.user)
-  $('#game-message').html('You Signed In Successfully')
+  $('#message').html('You Signed In Successfully')
   $('.sign-up-form').slideUp(500)
   $('.sign-in-form').slideUp(500)
   $('#game-message').removeClass('error-message')
