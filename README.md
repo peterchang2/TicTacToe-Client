@@ -10,7 +10,7 @@
 - jquery
 
 ## Thought Process & Steps
-- One step at a time
-- Started with what was most clear in my head (Auth api)
-- Then proceeded to Game api
-- Game logic is too complicated 
+- One step at a time.
+- Started with Auth api.
+- Then proceeded to Game api.
+- Game logic took a big chunk of time.
