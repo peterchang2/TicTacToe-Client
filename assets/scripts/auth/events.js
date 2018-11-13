@@ -30,7 +30,7 @@ const onChangePassword = function () {
     $(event.target).trigger('reset')
     api.changePassword(userData)
       .then(ui.changePasswordSuccess)
-      // .catch(ui.failure)
+      .catch(ui.failure)
   }
 }
 

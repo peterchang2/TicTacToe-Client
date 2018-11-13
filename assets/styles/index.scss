@@ -75,8 +75,8 @@ body {
 
 .game-board {
   display: grid;
-	width: 310px;
-	height: 310px;
+	width: 330px;
+	height: 330px;
 	margin: 0 auto;
   background-color: #596784;
   // border: 4px solid #d8b33e;
@@ -158,7 +158,7 @@ body {
 }
 
 .error-message {
-  color: red;
+  color: hotpink;
   font-weight: 700;
   font-size: 20px;
 }
