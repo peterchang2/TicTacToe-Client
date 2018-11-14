@@ -34,6 +34,7 @@ const signInSuccess = function (signInResponse) {
   $('#sign-in-btn').hide()
   $('.start-game-btn').fadeIn(500)
   $('.get-all-game-btn').fadeIn(500)
+  $('.got-game').show()
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
@@ -60,10 +61,9 @@ const signOutSuccess = function () {
   $('#change-password-form').trigger('reset')
   $('#message-box').addClass('sticky')
   $('.box').empty()
-  $('.got-game').show()
-  // setTimeout(function () {
-  //   $('#game-message').fadeOut().empty()
-  // }, 2000)
+  setTimeout(function () {
+    $('.got-game').fadeOut().empty()
+  }, 3000)
 }
 
 module.exports = {

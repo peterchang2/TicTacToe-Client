@@ -38,7 +38,6 @@ const onSignOut = function () {
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.failure)
-
 }
 
 module.exports = {
