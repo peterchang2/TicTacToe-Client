@@ -28,7 +28,8 @@ const createGameSuccess = function (data) {
   $('#player-turn').html(`Player: ${store.player}'s Turn`)
   $('#player-turn').removeClass('error-message')
   $('#player-turn').addClass('success-message')
-  $('#message').hide(500)
+  $('.game-container').fadeIn(500)
+  $('.got-game').hide()
 }
 
 const getGameIdSuccess = function () {

@@ -30,7 +30,7 @@ const onChangePassword = function () {
     $(event.target).trigger('reset')
     api.changePassword(userData)
       .then(ui.changePasswordSuccess)
-      // .catch(ui.failure)
+      .catch(ui.failure)
   }
 }
 
@@ -38,6 +38,7 @@ const onSignOut = function () {
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.failure)
+
 }
 
 module.exports = {

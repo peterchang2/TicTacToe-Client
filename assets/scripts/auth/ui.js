@@ -3,7 +3,7 @@
 const store = require('../store.js')
 
 const failure = function (FailureResponse) {
-  $('#game-message').html('Wrong Turn, Try Again')
+  $('#game-message').html('Something Went Wrong, Try Again')
   $('#game-message').removeClass('success-message')
   $('#game-message').addClass('error-message')
 }
@@ -23,9 +23,9 @@ const signUpSuccess = function (signUpResponse) {
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
   // console.log(store.user)
-  $('#message').html('You Signed In Successfully')
-  $('#message').removeClass('error-message')
-  $('#message').addClass('success-message')
+  $('#game-message').html('You Signed In Successfully')
+  $('#game-message').removeClass('error-message')
+  $('#game-message').addClass('success-message')
   $('.sign-up-form').slideUp(500)
   $('.sign-in-form').slideUp(500)
   $('#change-pass-btn').show()
@@ -34,7 +34,6 @@ const signInSuccess = function (signInResponse) {
   $('#sign-in-btn').hide()
   $('.start-game-btn').fadeIn(500)
   $('.get-all-game-btn').fadeIn(500)
-  $('.game-container').fadeIn(500)
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
@@ -45,10 +44,11 @@ const changePasswordSuccess = function (changePasswordResponse) {
 }
 
 const signOutSuccess = function () {
+  store.over = true
   $('#game-message').html('You Signed Out Successfully')
-  $('#player-turn').empty()
   $('#game-message').removeClass('error-message')
   $('#game-message').addClass('success-message')
+  $('#player-turn').empty()
   $('#change-pass-btn').hide()
   $('#change-password-form').slideUp(500)
   $('#sign-out-btn').hide()
@@ -56,15 +56,14 @@ const signOutSuccess = function () {
   $('#sign-in-btn').show()
   $('.start-game-btn').hide(500)
   $('.get-all-game-btn').hide(500)
-  $('.box').html('')
   $('.game-container').fadeOut(500)
-  $('.got-game').fadeIn(500)
-  $('#message').html('')
   $('#change-password-form').trigger('reset')
   $('#message-box').addClass('sticky')
-  setTimeout(function () {
-    $('#game-message').fadeOut(500).empty()
-  }, 2000)
+  $('.box').empty()
+  $('.got-game').show()
+  // setTimeout(function () {
+  //   $('#game-message').fadeOut().empty()
+  // }, 2000)
 }
 
 module.exports = {
