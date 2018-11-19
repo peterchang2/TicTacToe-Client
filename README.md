@@ -26,7 +26,7 @@
 * User can sign out.
 * User can create a new game and play against him/herself.
 * User can retrieve total number of games created.
-* [Wireframe](https://i.imgur.com/z1Ot262.jpg)
+* ![Wireframe](https://i.imgur.com/z1Ot262.jpg)
 
 ## Future Implementations
 * Better CSS
