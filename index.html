@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic Tac Toe by Peter</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="icon" type="image/png" sizes="32x32" href="public/tic.png">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+
+<!-- ==========================Nav Bar========================== -->
+      <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">TIC TAC TOE Extravaganza</span>
+        <form class="form-inline">
+          <button class="btn btn-outline-warning sign-up-btn" id="sign-up-btn" type="button">Sign Up</button>
+          <button class="btn btn-outline-warning sign-in-btn" id="sign-in-btn" type="button">Sign In</button>
+          <button class="btn btn-outline-warning sign-out-btn" id="sign-out-btn" type="button">Sign Out</button>
+          <button class="btn btn-outline-warning change-pass-btn" id="change-pass-btn" type="button">Change Password</button>
+        </form>
+      </nav>
+
+<!-- ==========================Auth Form========================= -->
+      <div class="auth-form" id="auth-form">
+        <form class="sign-up-form center" id="sign-up-form">
+          <legend>Sign-Up</legend>
+          <input type="email" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm PW">
+          <input type="submit" value="Sign-Up">
+        </form>
+        <form class="sign-in-form center" id="sign-in-form">
+          <legend>Sign-In</legend>
+          <input type="email" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="submit" value="Sign-In">
+        </form>
+        <form class="change-password-form center" id="change-password-form" >
+          <legend>Change-Password</legend>
+          <input class="old-Pass" type="password" name="passwords[old]" placeholder="Old Password">
+          <input class="new-Pass" type="password" name="passwords[new]" placeholder="New Password">
+          <input type="submit" value="Change">
+        </form>
+      </div>
+
+<!-- ============================Got Game========================== -->
+      <div class="got-game">
+        <!-- <h1>Got Game?</h1>
+        <h1>Go Ahead and Sign In</h1> -->
+      </div>
+
+      <div class="game-container">
+        <div class="game-board">
+          <div data-cell-index='0' class="box"></div>
+          <div data-cell-index='1' class="box"></div>
+          <div data-cell-index='2' class="box"></div>
+          <div data-cell-index='3' class="box"></div>
+          <div data-cell-index='4' class="box"></div>
+          <div data-cell-index='5' class="box"></div>
+          <div data-cell-index='6' class="box"></div>
+          <div data-cell-index='7' class="box"></div>
+          <div data-cell-index='8' class="box"></div>
+        </div>
+      </div>
+
+      <div class="game-btn">
+        <div class="btn-group">
+          <button class="start-game-btn" id="start-game-btn">Start Game</button>
+          <!-- <button class="reset-game-btn" id="reset-game-btn">Reset Game</button> -->
+          <button class="get-all-game-btn" id="get-all-game-btn">Get All</button>
+        </div>
+        <!-- <form action="" class="get-game" id="get-game">
+          <input type="text" name="games[id]" placeholder="Game ID">
+          <input type="submit" value="Find Games">
+        </form> -->
+      </div>
+
+      <div id="message-box">
+        <div id="player-turn"></div>
+        <div id="game-message"></div>
+        <div id="message"></div>
+      </div>
+
+<!-- ========================Footer Here============================ -->
+      <!-- <footer class="footer">
+        <div class="container">
+          <span class="text-muted">Copyright © 2018 Peter Chang</span>
+        </div>
+      </footer> -->
+
+    </body>
+</html>
